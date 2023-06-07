@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "the path is: `pwd`"
+echo "the path is: $(pwd)"
