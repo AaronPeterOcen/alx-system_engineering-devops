@@ -1,0 +1,15 @@
+total 44
+drwxr-xr-x 2 root root 234 Jun 12 02:20 .
+drwxr-xr-x 6 root root 121 Jun 11 23:10 ..
+-rwxr--r-- 1 root root  32 Jun 11 23:14 0-hello_world
+-rwxr--r-- 1 root root  28 Jun 12 00:18 1-confused_smiley
+-rwxr--r-- 1 root root  28 Jun 12 02:03 2-hellofile
+-rwxr--r-- 1 root root  39 Jun 12 02:04 3-twofiles
+-rwxr--r-- 1 root root  35 Jun 12 02:05 4-lastlines
+-rwxr--r-- 1 root root  35 Jun 12 01:28 5-firstlines
+-rwxr--r-- 1 root root  40 Jun 12 01:33 6-third_line
+-rwxr--r-- 1 root root  74 Jun 12 02:13 7-file
+-rwxr--r-- 1 root root  36 Jun 12 02:19 8-cwd_state
+-rwxr--r-- 1 root root 283 Jun  8 06:23 git.sh
+-rw-r--r-- 1 root root   0 Jun 12 02:20 ls_cwd_content
+-rw-r--r-- 1 root root 386 Jun 12 02:06 README.md
