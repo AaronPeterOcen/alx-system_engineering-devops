@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# displays the content of the curr dir
+
+for i in [^.]*
+do
+	echo "${i##*-}"
+done
