@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 # bash script that displays its own PID
 
-export info
 echo $$
-sleep 0
 
