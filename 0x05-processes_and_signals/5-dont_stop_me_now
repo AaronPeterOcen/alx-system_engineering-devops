@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# stops process in task 4
+
+# get the pid of task 4
+pid=$(pgrep "bash ./4-to_infinity_and_beyond" -f)
+
+if [ -n "$pid" ]
+then
+	kill -15 "$pid"
+fi
