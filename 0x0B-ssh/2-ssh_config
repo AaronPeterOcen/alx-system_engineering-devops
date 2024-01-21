@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# client config file
+ssh -v ubuntu@34.232.78.88
+
