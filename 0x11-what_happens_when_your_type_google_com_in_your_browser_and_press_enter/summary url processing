@@ -1,0 +1,141 @@
+Diving Deeper: From URL to Webpage - A Multi-Layered Journey
+
+When you type a URL and hit enter, a captivating journey unfolds, involving various technologies working in harmony. Let's explore each layer:
+
+1. DNS Request:
+
+    Imagine a phonebook for websites. The Domain Name System (DNS) translates the human-readable URL (like "google.com") into a numerical IP address, which computers understand.
+    Your browser checks its local cache (like a mini phonebook) first. If not found, it contacts a DNS server, traversing a hierarchy of servers until it finds the authoritative server for that domain.
+    This process ensures you reach the correct destination on the vast internet.
+
+2. TCP/IP:
+
+    Think of this as the highway for data. The Transmission Control Protocol (TCP) and Internet Protocol (IP) work together to establish and maintain a reliable connection between your computer and the server.
+    TCP acts like a traffic manager, ensuring data arrives in the correct order and without errors. IP acts like the address label, routing data packets to the right destination.
+
+3. Firewall:
+
+    This gatekeeper stands guard, protecting your computer from unauthorized access. It examines incoming and outgoing traffic based on predefined rules, allowing only permitted connections to proceed.
+    Think of it as a security checkpoint, memastikan hanya data yang aman dan diizinkan yang mencapai komputer Anda.
+
+4. HTTPS/SSL:
+
+    Imagine a secure tunnel for your data. HTTPS (Hypertext Transfer Protocol Secure) uses SSL (Secure Sockets Layer) to encrypt the communication between your browser and the server.
+    This encryption scrambles the data, making it unreadable to anyone who might intercept it, ensuring your privacy and security.
+
+5. Load-balancer:
+
+    This traffic controller distributes incoming requests efficiently across multiple servers, handling high traffic volumes. Imagine a busy restaurant with multiple chefs.
+    The load balancer ensures no single server gets overloaded, keeping the website responsive and preventing slowdowns.
+
+6. Web Server:
+
+    Here's where the website content resides. The web server receives your browser's HTTP request, interprets it, and retrieves the relevant files (HTML, images, etc.).
+    Think of it as the library holding the website's information, responding to your request for specific resources.
+
+7. Application Server (optional):
+
+    Some websites use additional software, like an application server, to process dynamic content or handle complex functionalities. Imagine a specialized chef in the kitchen, handling complex orders beyond basic ingredients.
+    This layer is not present for all websites, but plays a crucial role in dynamic and interactive web experiences.
+
+8. Database (optional):
+
+    Websites often store data in databases. If the requested content involves data retrieval (e.g., a search result), the web server may interact with a database to fetch the information.
+    Think of it as a vast storage room behind the library, containing additional information needed for certain requests.
+
+9. Content Rendering:
+
+    Finally, your browser takes the retrieved content and renders it into the webpage you see on your screen. This involves interpreting HTML code, downloading and displaying images, and executing any scripts.
+    This is like the chef assembling your dish from various ingredients, presenting it to you in a visually appealing way.
+
+Remember, this is a simplified explanation, and the actual journey can involve additional technologies and complexities depending on the specific website and its functionality. But by understanding these key layers, you gain a deeper appreciation for the intricate dance that delivers your desired webpage.
+
+A visual-ish representation
+
++---------------------+       +-----------------------+        +-----------------+
+|   Your Device       | -----> |       Firewall       | -----> |       DNS       |
++---------------------+       +-----------------------+        +-----------------+
+|           |                       |
+v           v                       v
++-------------------------+
+|         TCP/IP         |
++-------------------------+
+|           |                       |
+v           v                       v
++-------------------------+
+|        HTTPS          |
++-------------------------+
+|           |                       |
+v           v                       v
++-------------------------+
+|      Load Balancer     |
++-------------------------+
+|           |                       |
+v           v                       v
++-------------------------+
+|        Web Server      |
++-------------------------+
+|           |                       |
+v           v                       v
++-----------------+    +-----------------------------+
+| Request & Data   | -> | Application Server (optional)| -> |   Database (optional)|
++-----------------+    +-----------------------------+    +-----------------+
+|           |                       |
+v           v                       v
++-------------------------+
+|       Browser          |
++-------------------------+
+|           |                       |
+v           v                       v
++-------------------------+
+|        Webpage         |
++-------------------------+
+|           |                       |
+v           v                       v
++-------------------------+
+|         User           |
++-------------------------+
+
+Notes:
+
+    Arrows now follow the actual flow of data and requests.
+    Optional components (application server and database) are shown separately.
+    Firewall is now positioned before data reaches the web server.
+    User interaction with the webpage is added as the final step.
+
+
+
+
+
+    I am sure we have all wondered what happens when you type google.com and press enter on the keyboard. Well i want to walk you through what happens behind the scene of the entire search action at each layer:
+
+Domain Name System (DNS) Request
+    The Domain Name System helps to translate the human-readable URL like "google.com" into a numerical IP address, which computers can understand.
+    The browser checks its local cache first and if not found it contacts a DNS server, transversing a hierachy of servers until it finds the server for the entered domain. This process ensures that you can get to the desired webpage
+
+Transmission Control Protocol / Internet ProtocolTCP/IP
+    These two protocols work together to establish and maintain a reliable connection between your computer and the server. The TCP acts like a traffic manager, ensuring data arrives in the correct order and without errors. IP acts llike the address label, routing data packets to the right destination.
+
+The Firewall
+    This acts like a guard, protecting your computer from unauthorized access. It examines incoming and outgoing traffic based on the predefined rules and allowing only permitted connections to proceed.
+
+HTTPS/SSL
+    HTTPS (Hypertext Transfer Protocol Secure) / SSl (Secure Sockets Layer) both act like a secure tunnel for your data. HTTPS uses SSL to encrypt to the communication between your browser and the server. This encryption scrambles the data, making it unreadable to anyone who might intercept it hence ensuring it is secure.
+
+The Load Balancer
+    It is the traffic controller that distrubes incoming requests efficiently across multiple servers, handling high traffic volumes. It ensures no single server gets overloaded, keeping the website responsive and preventing slowdowns.
+
+The web server
+    This receives your browser's HTTP request, intercepts it, and retrieves the relevant files. Think of it as the library holding the websites information and responding to your request for specific resources.
+
+The Application Server
+    Some websites use additional software like and app server that processes dynamic content or handle complex functionalities. This layer is not present for all websites but plays a crucial  role in dynamic and interactive web experiences.
+
+Database
+    Websites usually store data in databases. if the requested content involves data retrieval, the web server will interact with a database to fetch the requested information.
+
+Content Rendering
+    Your browser then takes the retrieved content and renders it into the webpage on your screen. This involves interpretinf HTML code, downloading and displaying images, and executing any required scripts.
+
+    I
+    
