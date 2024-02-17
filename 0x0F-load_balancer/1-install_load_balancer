@@ -8,7 +8,7 @@ echo '  listen load_balancer
 	balance roundrobin
 	option httpclose
 	option forwardfor
-	server 432896-web-01 100.26.53.19 check
-	server 432896-web-02 18.208.119.136:80 check' | sudo tee /etc/haproxy/haproxy.cfg
+	server 440491-web-01 34.232.78.88:80 check 
+	server 440491-web-02 54.237.19.219:80 check' | sudo tee /etc/haproxy/haproxy.cfg
 sudo sed -i 's/ENABLED=0/ENABLED=1/' /etc/default/haproxy
 service haproxy start
