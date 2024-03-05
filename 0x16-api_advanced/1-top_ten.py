@@ -17,10 +17,15 @@ def top_ten(subreddit):
     """
     url = "https://www.reddit.com/r/{}/hot/json".format(subreddit)
     headers = {"User-Agent": "Dalvik/2.1.0"}
-    params = {"limit": 10}
-    response = requests.get(url, headers=headers, params=params, allow_redirects=False)
-    if response.status_code == 404:
+    # params = {"limit": 10}
+    response = requests.get(url, headers=headers)
+    if response.status_code == 200:
+        data = response.json()
+        posts = data["data"]["children"]
+        if not posts:
+            print("None")
+        else:
+            for post in posts:
+                print(post["data"]["title"])
+    else:
         print("None")
-        return
-    results = response.json().get("data")
-    [print(top.get("data").get("title")) for top in results.get("children")]
