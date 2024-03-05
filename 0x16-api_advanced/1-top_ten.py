@@ -15,7 +15,7 @@ def top_ten(subreddit):
     """
     queries reddit api
     """
-    url = "https://www.reddit.com/r/{}/hot/json".format(subreddit)
+    url = "https://www.reddit.com/r/{}/hot/json?limit=10".format(subreddit)
     headers = {"User-Agent": "Dalvik/2.1.0"}
     # params = {"limit": 10}
     response = requests.get(url, headers=headers)
