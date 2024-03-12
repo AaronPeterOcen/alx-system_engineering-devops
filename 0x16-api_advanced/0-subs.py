@@ -9,7 +9,7 @@
 """
 import requests
 
-# from sys import argv
+from sys import argv
 
 
 def number_of_subscribers(subreddit):
@@ -17,23 +17,35 @@ def number_of_subscribers(subreddit):
     returns the number of subscribers
     for a given subreddit
     """
-    url = "https://www.reddit.com/r/{}/about.json".format(subreddit)
-    headers = {"User-Agent": "MyBot/1.0"}
+    # url = "https://www.reddit.com/r/{}/about.json".format(subreddit)
+    # headers = {"User-Agent": "MyBot/1.0"}
 
-    response = requests.get(url, headers=headers, allow_redirects=False)
+    # response = requests.get(url, headers=headers, allow_redirects=False)
+    # # if response.status_code == 404:
+    # #     return 0
+    # # results = response.json().get("data")
+    # # return results.get("subscribers")
+    # print("Requesting URL:", url)
+    # print("Headers:", headers)
+    # print("Response status code:", response.status_code)
+    # print("Response content:", response.text)
     # if response.status_code == 404:
+    #     data = response.json()
+    #     subscribers = data["data"]["subscribers"]
+    #     print("Number of subscribers:", subscribers)
+    #     return subscribers
+    # else:
+    #     print("Error occurred. Returning 0 subscribers.")
     #     return 0
-    # results = response.json().get("data")
-    # return results.get("subscribers")
-    print("Requesting URL:", url)
-    print("Headers:", headers)
-    print("Response status code:", response.status_code)
-    print("Response content:", response.text)
-    if response.status_code == 404:
-        data = response.json()
-        subscribers = data["data"]["subscribers"]
-        print("Number of subscribers:", subscribers)
-        return subscribers
-    else:
-        print("Error occurred. Returning 0 subscribers.")
+    user = {"User-Agent": "Lizzie"}
+    url = requests.get(
+        "https://www.reddit.com/r/{}/about.json".format(subreddit), headers=user
+    ).json()
+    try:
+        return url.get("data").get("subscribers")
+    except Exception:
         return 0
+
+
+if __name__ == "__main__":
+    number_of_subscribers(argv[1])
