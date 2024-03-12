@@ -37,15 +37,12 @@ def number_of_subscribers(subreddit):
     # else:
     #     print("Error occurred. Returning 0 subscribers.")
     #     return 0
-    user = {"User-Agent": "Lizzie"}
-    url = requests.get(
-        "https://www.reddit.com/r/{}/about.json".format(subreddit), headers=user
-    ).json()
-    try:
-        return url.get("data").get("subscribers")
-    except Exception:
+    url = "https://www.reddit.com/r/{}/about.json".format(subreddit)
+    headers = {
+        "User-Agent": "linux:0x16.api.advanced:v1.0.0 (by /u/bdov_)"
+    }
+    response = requests.get(url, headers=headers, allow_redirects=False)
+    if response.status_code == 404:
         return 0
-
-
-if __name__ == "__main__":
-    number_of_subscribers(argv[1])
+    results = response.json().get("data")
+    return results.get("subscribers")
